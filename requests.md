@@ -14,7 +14,8 @@ Content type: ``` application/vnd.xmas.rating+json ```
 Ответ:
 ```
 {
-  "trees": [tree]
+  "trees": [tree],
+  "self": "/rating",
 }
 ```
 
@@ -29,12 +30,13 @@ GET /around?lg=:lg&lt=:lt&width=:width&height=:height
 Возваращает список новогдних ёлок вблизи пользователя. Параметрами выступают долгота lg, ширина lt - местонахождение пользователя.
 Width, height отклонения по долготе и ширине от местонахождения пользователя.
 
-Content type: ``` application/vnd.xmas.nearestlist+json ```
+Content type: ``` application/vnd.xmas.aroundlist+json ```
 
 Ответ:
 ```
 {
-  "trees": [tree]
+  "trees": [tree],
+  "self": "/around",
 }
 ```
 
