@@ -8,7 +8,8 @@
   "lg": float,
   "lt": float,
   "id": str,
-  "rating": float
+  "rating": float,
+  "self": str,
 }
 ```
 
@@ -19,6 +20,6 @@
 ```
 {
   "tree_id": str,
-  "stars": int
+  "stars": int,
 }
 ```
