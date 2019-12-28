@@ -9,17 +9,9 @@
 GET /raiting?top=:top
 ```
 
-Content type: ``` application/vnd.xmas.rating+json ```
+Content type: ``` application/vnd.xmas.treelist+json ```
 
-Ответ:
-```
-{
-  "trees": [tree],
-  "self": "/rating",
-}
-```
-
-tree является представлением из representations.md
+Возвращает представление Tree collection из representations.md.
 
 ## Список новогодних елок вблизи пользователя
 
@@ -30,17 +22,9 @@ GET /around?lg=:lg&lt=:lt&width=:width&height=:height
 Возваращает список новогдних ёлок вблизи пользователя. Параметрами выступают долгота lg, ширина lt - местонахождение пользователя.
 Width, height отклонения по долготе и ширине от местонахождения пользователя.
 
-Content type: ``` application/vnd.xmas.aroundlist+json ```
+Content type: ``` application/vnd.xmas.treelist+json ```
 
-Ответ:
-```
-{
-  "trees": [tree],
-  "self": "/around",
-}
-```
-
-tree является представлением из representations.md
+Возвращает представление Tree collection из representations.md.
 
 ##  Получение информации о конкретной новогодней ёлке
 
@@ -54,7 +38,17 @@ Content type: ``` application/vnd.xmas.tree + json ```
 ## Проголосовать за новогоднюю елку
 
 ```
-POST /vote
+PUT /trees/:id/vote 
 ```
+Content type: ``` application/vnd.xmas.vote + json ```
 
-Выставление рейтинга в звездах пользователем. Посылается представление Vote.
+Выставление рейтинга в звездах пользователем. Посылается представление Vote из representations.md.
+
+## Получение информации о выставленном голосое за конкретную ёлку пользователем
+
+```
+GET /trees/:id/vote 
+```
+Content type: ``` application/vnd.xmas.vote + json ```
+
+Возвращает представление Vote из representations.md.
