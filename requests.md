@@ -56,3 +56,5 @@ Content type: ``` application/vnd.xmas.vote + json ```
 ## Авторизация 
 
 Для авторизации нужно передать идентификатор пользователя в http заголовке Authorization. Идентификатор задаётся числом. Используется Basic Authorization.
+
+Запрос POST.
