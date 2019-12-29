@@ -38,7 +38,7 @@ Content type: ``` application/vnd.xmas.tree + json ```
 ## Проголосовать за новогоднюю елку
 
 ```
-PUT /trees/:id/vote 
+POST /trees/:id/vote 
 ```
 Content type: ``` application/vnd.xmas.vote + json ```
 
@@ -52,3 +52,7 @@ GET /trees/:id/vote
 Content type: ``` application/vnd.xmas.vote + json ```
 
 Возвращает представление Vote из representations.md.
+
+## Авторизация 
+
+Для авторизации нужно передать идентификатор пользователя в http заголовке Authorization. Идентификатор задаётся числом. Используется Basic Authorization.
